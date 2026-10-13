@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="6dp"
+  app:cardCornerRadius="12dp"
+  app:cardElevation="3dp"
+  app:strokeColor="#E0C2B3"
+  app:strokeWidth="1dp">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <!-- Imagen del producto -->
+    <ImageView
+      android:id="@+id/imgProducto"
+      android:layout_width="match_parent"
+      android:layout_height="110dp"
+      android:contentDescription="Imagen del producto"
+      android:scaleType="centerCrop"
+      android:src="@drawable/logo1" />
+
+    <!-- Nombre del producto -->
+    <TextView
+      android:id="@+id/txtNombreProducto"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:text="Café Capuchino"
+      android:textColor="#333333"
+      android:textSize="14sp"
+      android:textStyle="bold" />
+
+    <!-- Precio del producto -->
+    <TextView
+      android:id="@+id/txtPrecioProducto"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:text="$4.50"
+      android:textColor="#FB7800"
+      android:textSize="13sp"
+      android:textStyle="bold" />
+
+    <!-- Botón de comprar (MaterialButton) -->
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnComprar"
+      android:layout_width="match_parent"
+      android:layout_height="38dp"
+      android:layout_marginTop="8dp"
+      android:insetTop="0dp"
+      android:insetBottom="0dp"
+      android:text="Comprar"
+      android:textSize="12sp"
+      app:backgroundTint="#4A2C2A"
+      app:cornerRadius="8dp" />
+
+  </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

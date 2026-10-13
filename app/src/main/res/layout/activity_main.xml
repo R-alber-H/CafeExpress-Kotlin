@@ -1,19 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="#FFEADF"
   tools:context=".MainActivity">
 
-  <TextView
-    android:layout_width="wrap_content"
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+      android:id="@+id/imgLogo"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_marginBottom="16dp"
+      android:contentDescription="Logo de la empresa"
+      android:src="@drawable/logo1"
+      app:layout_constraintBottom_toTopOf="@id/txtSubtitulo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+      android:id="@+id/txtSubtitulo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:text="CAFE ARTESANAL - ENTREGA INMEDIATA"
+      android:textColor="#8B5A2B"
+      android:textSize="10sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/layoutTitulo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <LinearLayout
+      android:id="@+id/layoutTitulo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginBottom="12dp"
+      app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/txtSubtitulo">
+
+      <TextView
+        android:id="@+id/txtCafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cafe "
+        android:letterSpacing="0.05"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/txtExpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Express"
+        android:letterSpacing="0.05"
+        android:textColor="#FB7800"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/txtDescripcion"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="24dp"
+      android:paddingHorizontal="14dp"
+      android:gravity="center"
+      android:text="El mejor café nacional y snacks recién horneados en minutos en tu puerta"
+      android:textColor="#666666"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toTopOf="@+id/btnComenzar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/layoutTitulo" />
+
+    <Button
+      android:id="@+id/btnComenzar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingHorizontal="20dp"
+      android:paddingVertical="10dp"
+      android:text="Comenzar experiencia"
+      android:textColor="#FFFFFF"
+      app:backgroundTint="#4A2C2A"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/txtDescripcion" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
