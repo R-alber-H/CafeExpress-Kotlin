@@ -26,7 +26,6 @@ class HomeActivity : AppCompatActivity() {
         setupRecyclerViewProductos()
     }
 
-    // 💡 Esta función va FUERA de onCreate, al mismo nivel
     private fun setupRecyclerViewProductos() {
         val recycler = findViewById<RecyclerView>(R.id.recyclerProductos)
 

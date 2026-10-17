@@ -6,12 +6,13 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:fillViewport="true"
-  android:background="#FFFFFF"
+  android:background="#FAF4EF"
   tools:context=".ui.HomeActivity">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingTop="16dp"
     android:paddingBottom="24dp">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -67,10 +68,10 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginHorizontal="16dp"
-      android:layout_marginTop="4dp"
+      android:layout_marginTop="5dp"
       android:hint="Buscar café, postres..."
       android:textColorHint="#ADA091"
-      app:boxBackgroundColor="#FCF2E8"
+      app:boxBackgroundColor="#FFFFFF"
       app:boxStrokeWidth="0dp"
       app:boxStrokeWidthFocused="0dp"
       app:boxCornerRadiusBottomEnd="10dp"
@@ -89,7 +90,7 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:maxLines="1"
-        android:textSize="13sp"
+        android:textSize="12sp"
         android:textColor="#333333" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -142,7 +143,7 @@
         app:cornerRadius="10dp"
         app:iconGravity="textStart"
         app:iconTint="#141414"
-        app:backgroundTint="#FCF2E8" />
+        app:backgroundTint="#FFFFFF" />
 
       <com.google.android.material.button.MaterialButton
         android:layout_width="0dp"
@@ -156,7 +157,7 @@
         app:icon="@drawable/ic_coffee"
         app:cornerRadius="10dp"
         app:iconGravity="textStart"
-        app:backgroundTint="#FCF2E8" />
+        app:backgroundTint="#FFFFFF" />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
