@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="#FAF4EF"
+  tools:context=".ui.HomeActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="24dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/topToolbar"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:background="@android:color/transparent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:contentInsetStart="0dp"
+      app:contentInsetEnd="0dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+          android:id="@+id/imgLogoNav"
+          android:layout_width="120dp"
+          android:layout_height="32dp"
+          android:contentDescription="Logo de la cafetería"
+          android:src="@drawable/logonombre"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnIniciarSesion"
+          style="?attr/materialButtonOutlinedStyle"
+          android:layout_width="wrap_content"
+          android:layout_height="32dp"
+          android:text="Iniciar sesión"
+          android:textColor="#4A2C2A"
+          android:textSize="11sp"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:paddingHorizontal="12dp"
+          app:strokeColor="#4A2C2A"
+          app:strokeWidth="1dp"
+          app:cornerRadius="10dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/tilBuscar"
+      style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="5dp"
+      android:hint="Buscar café, postres..."
+      android:textColorHint="#ADA091"
+      app:boxBackgroundColor="#FFFFFF"
+      app:boxStrokeWidth="0dp"
+      app:boxStrokeWidthFocused="0dp"
+      app:boxCornerRadiusBottomEnd="10dp"
+      app:boxCornerRadiusBottomStart="10dp"
+      app:boxCornerRadiusTopEnd="10dp"
+      app:boxCornerRadiusTopStart="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/topToolbar"
+      app:startIconDrawable="@drawable/ic_search"
+      app:startIconTint="#ADA091">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:textColor="#333333" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+      android:id="@+id/txtCategoriasTitulo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="14dp"
+      android:text="Categorías"
+      android:textColor="#333333"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tilBuscar" />
+
+    <LinearLayout
+      android:id="@+id/layoutCategorias"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="8dp"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/txtCategoriasTitulo">
+
+      <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginEnd="4dp"
+        android:text="Cafés"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_coffee"
+        app:cornerRadius="10dp"
+        app:iconGravity="textStart"
+        app:iconTint="#FFFFFF"
+        app:backgroundTint="#4A2C2A" />
+
+      <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="4dp"
+        android:text="Snacks"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_coffee"
+        app:cornerRadius="10dp"
+        app:iconGravity="textStart"
+        app:iconTint="#141414"
+        app:backgroundTint="#FFFFFF" />
+
+      <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:text="Postres"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:iconTint="#141414"
+        app:icon="@drawable/ic_coffee"
+        app:cornerRadius="10dp"
+        app:iconGravity="textStart"
+        app:backgroundTint="#FFFFFF" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cardBanner"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="20dp"
+      app:cardBackgroundColor="#5C2D1A"
+      app:cardCornerRadius="16dp"
+      app:cardElevation="4dp"
+      app:strokeWidth="0dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/layoutCategorias">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+          android:id="@+id/txtBannerHorario"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="¡Promoción por tiempo limitado!"
+          android:textColor="#E0C2B3"
+          android:textSize="12sp"
+          app:layout_constraintEnd_toStartOf="@id/imgBannerCafe"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/txtBannerTitulo"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="¡Lleva 2 y paga 1\nen tu café favorito!"
+          android:textColor="#FFFFFF"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@id/imgBannerCafe"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtBannerHorario" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnBannerOrder"
+          android:layout_width="wrap_content"
+          android:layout_height="32dp"
+          android:layout_marginTop="12dp"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:text="¡Pedir ahora!"
+          android:textColor="#FFFFFF"
+          android:textSize="12sp"
+          app:backgroundTint="#E68A45"
+          app:cornerRadius="10dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtBannerTitulo" />
+
+        <ImageView
+          android:id="@+id/imgBannerCafe"
+          android:layout_width="110dp"
+          android:layout_height="110dp"
+          android:contentDescription="Café en oferta"
+          android:scaleType="centerCrop"
+          android:src="@drawable/cafebanner"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+      android:id="@+id/txtPopularesTitulo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="20dp"
+      android:text="Productos Populares"
+      android:textColor="#333333"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/cardBanner" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerProductos"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="12dp"
+      android:layout_marginTop="8dp"
+      android:nestedScrollingEnabled="false"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/txtPopularesTitulo"
+      tools:itemCount="4"
+      tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      tools:orientation="horizontal"
+      tools:listitem="@layout/item_producto" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
