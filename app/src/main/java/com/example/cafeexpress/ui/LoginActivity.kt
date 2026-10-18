@@ -1,5 +1,6 @@
 package com.example.cafeexpress.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -41,6 +42,13 @@ class LoginActivity : AppCompatActivity() {
         val passwordIngresado = etPassword.text.toString().trim()
 
         if (emailIngresado == correoFijo && passwordIngresado == passwordFijo) {
+
+            val sharedPreferences = getSharedPreferences("CredencialesApp", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.putString("user_email", emailIngresado)
+            editor.putBoolean("is_logged", true)
+            editor.apply()
+
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
