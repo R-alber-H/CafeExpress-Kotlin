@@ -1,8 +1,11 @@
 package com.example.cafeexpress.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.ButtonBarLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,11 +20,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
         setupRecyclerViewProductos()
     }
@@ -39,6 +37,13 @@ class HomeActivity : AppCompatActivity() {
         // Obtenemos los productos desde nuestra fuente de datos (DataSource)
         val fuenteDeDatos = DatosProductos()
         val listaDeProductos = fuenteDeDatos.obtenerProductosPopulares()
+
+        val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
+
+        btnIniciarSesion.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         // 3. Asignamos el adaptador
         recycler.adapter = ProductoAdapter(listaDeProductos)

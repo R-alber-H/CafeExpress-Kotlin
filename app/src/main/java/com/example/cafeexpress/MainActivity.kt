@@ -22,10 +22,7 @@ class MainActivity : AppCompatActivity() {
         val btnComenzar = findViewById<Button>(R.id.btnComenzar)
 
         btnComenzar.setOnClickListener {
-            // 3. Creamos el Intent para viajar de MainActivity a HomeActivity
             val intent = Intent(this, HomeActivity::class.java)
-
-            // 4. Lanzamos la pantalla
             startActivity(intent)
         }
     }
