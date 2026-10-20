@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  android:background="#FAF4EF">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:paddingBottom="24dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/topToolbar"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:background="@android:color/transparent"
+      app:contentInsetEnd="0dp"
+      app:contentInsetStart="0dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+          android:id="@+id/btnRegresar"
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:padding="5dp"
+          android:src="@drawable/ic_previus"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/tvTituloPerfil"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Perfil"
+          android:textColor="#333333"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnCerrarSesion"
+          android:layout_width="wrap_content"
+          android:layout_height="36dp"
+          android:text="Cerrar sesión"
+          android:textColor="#721C24"
+          android:textSize="11sp"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:paddingHorizontal="12dp"
+          app:backgroundTint="#F8D7DA"
+          app:cornerRadius="10dp"
+          app:strokeWidth="0dp"
+          app:iconPadding="6dp"
+          app:iconSize="16dp"
+          app:iconTint="#721C24"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+      android:id="@+id/imgLogo"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_marginTop="24dp"
+      android:src="@drawable/fotoperfil"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/topToolbar" />
+
+    <TextView
+      android:id="@+id/txtemail"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:paddingHorizontal="14dp"
+      android:gravity="center"
+      android:text="usuario1@gmail.com"
+      android:textColor="#666666"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
