@@ -46,6 +46,12 @@ class HomeActivity : AppCompatActivity() {
         val listaDeProductos = fuenteDeDatos.obtenerProductosPopulares()
 
         val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
+        val btnPerfil = findViewById<ImageView>(R.id.btnPerfil)
+
+        btnPerfil.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
+            startActivity(intent)
+        }
 
         btnIniciarSesion.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
@@ -60,7 +66,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun is_logged(userIsLogged : Boolean){
         val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
-        val icPerfil = findViewById<ImageView>(R.id.icPerfil)
+        val icPerfil = findViewById<ImageView>(R.id.btnPerfil)
 
         if(userIsLogged){
             btnIniciarSesion.visibility = View.GONE
