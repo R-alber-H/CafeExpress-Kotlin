@@ -1,108 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:fillViewport="true"
-  android:background="#FAF4EF"
+  android:background="#070707"
+  android:padding="24dp"
   tools:context=".MainActivity">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/main"
-    android:layout_width="match_parent"
+  <ImageView
+    android:id="@+id/imgLogo"
+    android:layout_width="260dp"
+    android:layout_height="360dp"
+    android:layout_marginBottom="16dp"
+    android:contentDescription="Logo de la empresa"
+    android:src="@drawable/cafesplash"
+    app:layout_constraintBottom_toTopOf="@id/txtSubtitulo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed" />
+
+  <TextView
+    android:id="@+id/txtSubtitulo"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="24dp">
+    android:layout_marginBottom="8dp"
+    android:text="CAFÉ ARTESANAL - ENTREGA INMEDIATA"
+    android:textColor="#FB7800"
+    android:textSize="10sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/layoutTitulo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
-    <ImageView
-      android:id="@+id/imgLogo"
-      android:layout_width="150dp"
-      android:layout_height="150dp"
-      android:layout_marginBottom="16dp"
-      android:contentDescription="Logo de la empresa"
-      android:src="@drawable/logo1"
-      app:layout_constraintBottom_toTopOf="@id/txtSubtitulo"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-      android:id="@+id/txtSubtitulo"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
-      android:text="CAFE ARTESANAL - ENTREGA INMEDIATA"
-      android:textColor="#8B5A2B"
-      android:textSize="10sp"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toTopOf="@+id/layoutTitulo"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
-
-    <LinearLayout
-      android:id="@+id/layoutTitulo"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginBottom="12dp"
-      app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/txtSubtitulo">
-
-      <TextView
-        android:id="@+id/txtCafe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cafe "
-        android:letterSpacing="0.05"
-        android:textColor="#333333"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-      <TextView
-        android:id="@+id/txtExpress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Express"
-        android:letterSpacing="0.05"
-        android:textColor="#FB7800"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    </LinearLayout>
+  <LinearLayout
+    android:id="@+id/layoutTitulo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/txtSubtitulo">
 
     <TextView
-      android:id="@+id/txtDescripcion"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="24dp"
-      android:paddingHorizontal="14dp"
-      android:gravity="center"
-      android:text="El mejor café nacional y snacks recién horneados en minutos en tu puerta"
-      android:textColor="#666666"
-      android:textSize="12sp"
-      app:layout_constraintBottom_toTopOf="@+id/btnComenzar"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/layoutTitulo" />
-
-    <Button
-      android:id="@+id/btnComenzar"
+      android:id="@+id/txtCafe"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:paddingHorizontal="20dp"
-      android:paddingVertical="10dp"
-      android:text="Comenzar experiencia"
-      android:textColor="#FFFFFF"
-      app:backgroundTint="#4A2C2A"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/txtDescripcion" />
+      android:letterSpacing="0.05"
+      android:text="Café "
+      android:textColor="#E2E0E0"
+      android:textSize="24sp"
+      android:textStyle="bold" />
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+      android:id="@+id/txtExpress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:letterSpacing="0.05"
+      android:text="Express"
+      android:textColor="#FB7800"
+      android:textSize="24sp"
+      android:textStyle="bold" />
 
-</ScrollView>
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/txtDescripcion"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingHorizontal="14dp"
+    android:text="El mejor café nacional y snacks recién horneados en minutos en tu puerta"
+    android:textColor="#D3D3D3"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/layoutTitulo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
