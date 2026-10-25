@@ -17,8 +17,41 @@
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
       android:layout_height="?attr/actionBarSize"
-      android:background="?attr/colorPrimary"
-      android:theme="?attr/actionBarTheme" />
+      android:background="#F8F9FA"
+      android:theme="?attr/actionBarTheme">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp">
+
+        <ImageView
+          android:layout_width="110dp"
+          android:layout_height="30dp"
+          android:src="@drawable/logonombre" />
+
+        <View
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_weight="1" />
+
+        <ImageView
+          android:id="@+id/btnMenuDerecha"
+          android:layout_width="32dp"
+          android:layout_height="30dp"
+          android:clickable="true"
+          android:focusable="true"
+          app:tint="#FF5722"
+          android:src="@drawable/ic_menu"/>
+
+<!--          android:background="?attr/selectableItemBackgroundBorderless"-->
+
+
+      </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
       android:id="@+id/fragmentContainer"

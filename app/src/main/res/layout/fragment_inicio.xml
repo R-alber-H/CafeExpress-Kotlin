@@ -13,47 +13,47 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <RelativeLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp">
+<!--    <RelativeLayout-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginBottom="16dp">-->
 
-      <ImageView
-        android:id="@+id/imgLogoNav"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:contentDescription="Logo de la cafetería"
-        android:src="@drawable/logonombre" />
+<!--      <ImageView-->
+<!--        android:id="@+id/imgLogoNav"-->
+<!--        android:layout_width="110dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:contentDescription="Logo de la cafetería"-->
+<!--        android:src="@drawable/logonombre" />-->
 
-      <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:orientation="horizontal">
+<!--      <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:orientation="horizontal">-->
 
-        <ImageButton
-          android:id="@+id/btnNotificaciones"
-          android:layout_width="28dp"
-          android:layout_height="28dp"
-          android:layout_marginEnd="8dp"
-          android:background="?attr/selectableItemBackgroundBorderless"
-          android:scaleType="fitCenter"
-          android:src="@drawable/ic_bell"
-          app:tint="#6D6A6A" />
+<!--        <ImageButton-->
+<!--          android:id="@+id/btnNotificaciones"-->
+<!--          android:layout_width="28dp"-->
+<!--          android:layout_height="28dp"-->
+<!--          android:layout_marginEnd="8dp"-->
+<!--          android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--          android:scaleType="fitCenter"-->
+<!--          android:src="@drawable/ic_bell"-->
+<!--          app:tint="#6D6A6A" />-->
 
-        <ImageButton
-          android:id="@+id/btnCerrarSesion"
-          android:layout_width="28dp"
-          android:layout_height="28dp"
-          android:background="?attr/selectableItemBackgroundBorderless"
-          android:contentDescription="Cerrar sesión"
-          android:src="@drawable/ic_closed"
-          app:tint="#F66161" />
-      </LinearLayout>
-    </RelativeLayout>
+<!--        <ImageButton-->
+<!--          android:id="@+id/btnCerrarSesion"-->
+<!--          android:layout_width="28dp"-->
+<!--          android:layout_height="28dp"-->
+<!--          android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--          android:contentDescription="Cerrar sesión"-->
+<!--          android:src="@drawable/ic_closed"-->
+<!--          app:tint="#F66161" />-->
+<!--      </LinearLayout>-->
+<!--    </RelativeLayout>-->
 
     <androidx.cardview.widget.CardView
       android:layout_width="match_parent"
