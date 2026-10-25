@@ -33,6 +33,10 @@
       android:name=".ui.PerfilActivity"
       android:exported="false"
       android:windowSoftInputMode="adjustResize" />
+    <activity
+      android:name=".ui.DashboardActivity"
+      android:exported="false"
+      android:windowSoftInputMode="adjustResize" />
   </application>
 
 </manifest>
