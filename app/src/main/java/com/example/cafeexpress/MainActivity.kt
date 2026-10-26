@@ -21,10 +21,25 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            // 1. Revisamos SharedPreferences usando la misma clave "CredencialesApp"
+            val sharedPreferences = getSharedPreferences("CredencialesApp", MODE_PRIVATE)
+            val isLogged = sharedPreferences.getBoolean("is_logged", false)
+            val userRol = sharedPreferences.getString("user_rol", "")
 
+            val intent = if (isLogged) {
+                // Si hay sesión activa, redirigimos según su rol
+                if (userRol == "admin") {
+                    Intent(this, com.example.cafeexpress.ui.DashboardActivity::class.java)
+                } else {
+                    Intent(this, HomeActivity::class.java)
+                }
+            } else {
+                // Si no hay sesión, va directo al Home normal
+                Intent(this, HomeActivity::class.java)
+            }
+
+            startActivity(intent)
             finish()
-        }, 5000)
+        }, 3000)
     }
 }

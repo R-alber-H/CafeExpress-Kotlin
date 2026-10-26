@@ -71,6 +71,9 @@ class HomeActivity : AppCompatActivity() {
         if(userIsLogged){
             btnIniciarSesion.visibility = View.GONE
             icPerfil.visibility = View.VISIBLE
+        }else{
+            btnIniciarSesion.visibility = View.VISIBLE
+            icPerfil.visibility = View.GONE
         }
     }
 }
