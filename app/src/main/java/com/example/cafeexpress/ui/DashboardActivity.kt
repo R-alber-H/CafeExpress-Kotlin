@@ -47,6 +47,11 @@ class DashboardActivity : AppCompatActivity() {
                         .replace(R.id.fragmentContainer, InicioFragment())
                         .commit()
                 }
+                R.id.nav_contacto -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, ContactoFragment())
+                        .commit()
+                }
             }
             drawerLayout.closeDrawer(GravityCompat.START)
             true
