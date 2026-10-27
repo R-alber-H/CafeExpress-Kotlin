@@ -53,21 +53,19 @@ class DashboardActivity : AppCompatActivity() {
                         .replace(R.id.fragmentContainer, ContactoFragment())
                         .commit()
                 }
+                R.id.nav_nosotros -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, NosotrosFragment())
+                        .commit()
+                }
                 R.id.nav_logout -> {
-                    // 1. Limpiar los datos de sesión en SharedPreferences
                     val sharedPreferences = getSharedPreferences("CredencialesApp", MODE_PRIVATE)
                     val editor = sharedPreferences.edit()
-                    editor.clear() // O puedes borrar solo el flag de sesión activa
+                    editor.clear()
                     editor.apply()
 
-                    // 2. Redirigir al usuario a la pantalla de Login (ej: LoginActivity o MainActivity)
-                    val intent = Intent(
-                        this,
-                        HomeActivity::class.java
-                    ) // Cambia por el nombre de tu Activity de inicio/login
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
-
-                    // 3. Cerrar el Dashboard actual para que no pueda volver atrás con el botón de retroceso
                     finish()
                 }
             }

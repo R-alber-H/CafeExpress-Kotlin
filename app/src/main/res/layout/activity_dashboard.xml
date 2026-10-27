@@ -44,7 +44,7 @@
           android:clickable="true"
           android:focusable="true"
           app:tint="#FF5722"
-          android:src="@drawable/ic_menu"/>
+          android:src="@drawable/ic_menu2"/>
 
       </LinearLayout>
 
