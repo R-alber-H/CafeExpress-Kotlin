@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fillViewport="true"
+  tools:context=".ui.SalarioFragment">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Calculadora de Salarios"
+      android:textColor="#333333"
+      android:textSize="16sp"
+      android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cardFormulario"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:visibility="visible"
+      app:cardBackgroundColor="#FFFFFF"
+      app:cardCornerRadius="10dp"
+      app:cardElevation="2dp"
+      app:strokeWidth="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Nombres"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <EditText
+          android:id="@+id/etNombres"
+          android:layout_width="match_parent"
+          android:layout_height="42dp"
+          android:layout_marginTop="6dp"
+          android:background="@drawable/bg_input_rounded"
+          android:hint="Ingrese nombres"
+          android:inputType="textPersonName"
+          android:paddingHorizontal="16dp"
+          android:textColor="#333333"
+          android:textSize="12sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Apellidos"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <EditText
+          android:id="@+id/etApellidos"
+          android:layout_width="match_parent"
+          android:layout_height="42dp"
+          android:layout_marginTop="6dp"
+          android:background="@drawable/bg_input_rounded"
+          android:hint="Ingrese apellidos"
+          android:inputType="textPersonName"
+          android:paddingHorizontal="16dp"
+          android:textColor="#333333"
+          android:textSize="12sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Cargo"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="42dp"
+          android:layout_marginTop="6dp"
+          android:background="@drawable/bg_input_rounded"
+          android:gravity="center_vertical"
+          android:paddingHorizontal="8dp">
+
+          <Spinner
+            android:id="@+id/spinnerCargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" />
+        </LinearLayout>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Horas trabajadas"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <EditText
+          android:id="@+id/etHoras"
+          android:layout_width="match_parent"
+          android:layout_height="42dp"
+          android:layout_marginTop="6dp"
+          android:background="@drawable/bg_input_rounded"
+          android:hint="Ej. 40"
+          android:inputType="number"
+          android:paddingHorizontal="16dp"
+          android:textColor="#333333"
+          android:textSize="12sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Fecha de pago"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <EditText
+          android:id="@+id/etFecha"
+          android:layout_width="match_parent"
+          android:layout_height="42dp"
+          android:layout_marginTop="6dp"
+          android:background="@drawable/bg_input_rounded"
+          android:clickable="true"
+          android:focusable="false"
+          android:hint="Seleccionar fecha"
+          android:inputType="none"
+          android:paddingHorizontal="16dp"
+          android:textColor="#333333"
+          android:textSize="12sp" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Turno de trabajo"
+          android:textColor="#333333"
+          android:textSize="12sp"
+          android:textStyle="bold" />
+
+        <RadioGroup
+          android:id="@+id/rgTurno"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:orientation="horizontal">
+
+          <RadioButton
+            android:id="@+id/rbManana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="Mañana"
+            android:textSize="12sp" />
+
+          <RadioButton
+            android:id="@+id/rbTarde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarde"
+            android:textSize="12sp" />
+        </RadioGroup>
+
+        <Button
+          android:id="@+id/btnCalcular"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginTop="24dp"
+          android:text="Calcular Salario"
+          android:textColor="#FFFFFF"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          app:backgroundTint="#1C4BCA"
+          app:cornerRadius="10dp" />
+
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cardResultado"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:visibility="gone"
+      app:cardBackgroundColor="#FFFFFF"
+      app:cardCornerRadius="10dp"
+      app:cardElevation="2dp"
+      app:strokeWidth="0dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Resultado del Cálculo"
+          android:textColor="#333333"
+          android:textSize="15sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/txtResultadoNombre"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="12dp"
+          android:text="Nombre: "
+          android:textColor="#333333"
+          android:textSize="13sp" />
+
+        <TextView
+          android:id="@+id/txtResultadoCargo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="Cargo y Turno: "
+          android:textColor="#555555"
+          android:textSize="13sp" />
+
+        <TextView
+          android:id="@+id/txtResultadoFecha"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="Fecha: —"
+          android:textColor="#555555"
+          android:textSize="13sp" />
+
+        <TextView
+          android:id="@+id/txtResultadoTotal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text=""
+          android:textColor="#1C4BCA"
+          android:textSize="18sp"
+          android:textStyle="bold" />
+
+        <Button
+          android:id="@+id/btnNuevoCalculo"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_marginTop="24dp"
+          android:text="Calcular Otro Salario"
+          android:textColor="#FFFFFF"
+          android:textSize="12sp"
+          android:textStyle="bold"
+          app:backgroundTint="#1C4BCA"
+          app:cornerRadius="10dp" />
+
+      </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+  </LinearLayout>
+</ScrollView>

@@ -58,6 +58,11 @@ class DashboardActivity : AppCompatActivity() {
                         .replace(R.id.fragmentContainer, NosotrosFragment())
                         .commit()
                 }
+                R.id.nav_salario -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, SalarioFragment())
+                        .commit()
+                }
                 R.id.nav_logout -> {
                     val sharedPreferences = getSharedPreferences("CredencialesApp", MODE_PRIVATE)
                     val editor = sharedPreferences.edit()
