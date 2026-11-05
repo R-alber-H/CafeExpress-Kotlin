@@ -8,9 +8,19 @@
       android:title="Inicio" />
 
     <item
+      android:id="@+id/nav_nosotros"
+      android:icon="@drawable/ic_coffee"
+      android:title="Nosotros" />
+
+    <item
       android:id="@+id/nav_contacto"
       android:icon="@drawable/ic_contact"
       android:title="Contactos" />
+
+    <item
+      android:id="@+id/nav_salario"
+      android:icon="@drawable/ic_salario"
+      android:title="Salarios" />
   </group>
 
   <item android:title="">

@@ -6,7 +6,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:fillViewport="true"
-  android:background="#FAF4EF"
+  android:background="#F8F9FA"
   tools:context=".ui.HomeActivity">
 
   <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,6 +29,8 @@
       <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+
         android:paddingHorizontal="16dp">
 
         <ImageView
@@ -78,7 +80,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginHorizontal="16dp"
-      android:layout_marginTop="5dp"
+      android:layout_marginTop="10dp"
       android:hint="Buscar café, postres..."
       android:textColorHint="#ADA091"
       app:boxBackgroundColor="#FFFFFF"
