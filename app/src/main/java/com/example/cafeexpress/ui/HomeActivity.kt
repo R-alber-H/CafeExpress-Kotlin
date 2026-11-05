@@ -27,11 +27,11 @@ class HomeActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("CredencialesApp", Context.MODE_PRIVATE)
         val userIsLogged = sharedPreferences.getBoolean("is_logged", false)
 
-        setupRecyclerViewProductos()
+        configurarRecyclerViewProductos()
         is_logged((userIsLogged))
     }
 
-    private fun setupRecyclerViewProductos() {
+    private fun configurarRecyclerViewProductos() {
         val recycler = findViewById<RecyclerView>(R.id.recyclerProductos)
 
         // 1. Configuramos el diseño horizontal
@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
             false
         )
 
-        // Obtenemos los productos desde nuestra fuente de datos
+        // Obtenemos los productos
         val fuenteDeDatos = DatosProductos()
         val listaDeProductos = fuenteDeDatos.obtenerProductosPopulares()
 

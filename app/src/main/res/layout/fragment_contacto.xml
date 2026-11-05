@@ -124,6 +124,7 @@
       android:textStyle="bold"
       android:textColor="#333333" />
 
+    <!-- Contacto Fijo 1: Felipe Cáceres -->
     <androidx.cardview.widget.CardView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -169,6 +170,7 @@
       </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- Contacto Fijo 2: María Lopez -->
     <androidx.cardview.widget.CardView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -211,6 +213,50 @@
             android:textColor="#777777"
             android:textSize="12sp" />
         </LinearLayout>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      app:cardCornerRadius="10dp"
+      app:cardElevation="2dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Último Contacto Agregado"
+          android:textColor="#1C4BCA"
+          android:textSize="11sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/txtNombreResultado"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="Nombre y Apellido"
+          android:textColor="#333333"
+          android:textSize="15sp"
+          android:textStyle="bold" />
+
+        <TextView
+          android:id="@+id/txtTelefonoResultado"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="Teléfono"
+          android:textColor="#777777"
+          android:textSize="12sp" />
+
       </LinearLayout>
     </androidx.cardview.widget.CardView>
 
