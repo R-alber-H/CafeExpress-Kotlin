@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.cafeexpress.R
@@ -24,6 +25,9 @@ class ContactoFragment : Fragment() {
         val etTelefonoContacto = view.findViewById<EditText>(R.id.etTelefonoContacto)
         val btnAgregar = view.findViewById<Button>(R.id.btnAgregarContacto)
 
+        val txtNombreRes = view.findViewById<TextView>(R.id.txtNombreResultado)
+        val txtTelefonoRes = view.findViewById<TextView>(R.id.txtTelefonoResultado)
+
         btnAgregar.setOnClickListener {
             val nombre = etNombreContacto.text.toString().trim()
             val apellido = etApellidoContacto.text.toString().trim()
@@ -34,7 +38,11 @@ class ContactoFragment : Fragment() {
                 return@setOnClickListener
             }
 
+            txtNombreRes.text = "$nombre $apellido"
+            txtTelefonoRes.text = telefono
+
             Toast.makeText(requireContext(), "Contacto añadido con éxito", Toast.LENGTH_SHORT).show()
+
 
             etNombreContacto.setText("")
             etApellidoContacto.setText("")
