@@ -65,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
                             .addOnSuccessListener { document ->
                                 if (document.exists()) {
                                     val nombre = document.getString("nombre") ?: "Usuario"
-                                    val rol = document.getString("role") ?: "cliente"
+                                    val rol = document.getString("rol") ?: "cliente"
                                     val correo = document.getString("email") ?: emailIngresado
 
                                     // 3. Guardar sesión localmente en SharedPreferences
