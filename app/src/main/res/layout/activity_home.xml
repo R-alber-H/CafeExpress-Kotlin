@@ -273,6 +273,78 @@
       tools:orientation="horizontal"
       tools:listitem="@layout/item_producto" />
 
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cardBanner2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="16dp"
+      android:layout_marginTop="20dp"
+      app:cardBackgroundColor="#F3E3D6"
+      app:cardCornerRadius="16dp"
+      app:cardElevation="4dp"
+      app:strokeWidth="0dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/recyclerProductos">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+          android:id="@+id/txtBannerHorario1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="¡Promoción del mes!"
+          android:textColor="#C34A08"
+          android:textSize="12sp"
+          app:layout_constraintEnd_toStartOf="@id/imgBannerCafe1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+          android:id="@+id/txtBannerTitulo1"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="6dp"
+          android:text="¡50% de descuento\nen todos los sandwich!"
+          android:textColor="#141313"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toStartOf="@id/imgBannerCafe1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtBannerHorario1" />
+
+        <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnBannerOrder1"
+          android:layout_width="wrap_content"
+          android:layout_height="32dp"
+          android:layout_marginTop="12dp"
+          android:insetTop="0dp"
+          android:insetBottom="0dp"
+          android:text="¡Pedir ahora!"
+          android:textColor="#FFFFFF"
+          android:textSize="12sp"
+          app:backgroundTint="#5C2D1A"
+          app:cornerRadius="10dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/txtBannerTitulo1" />
+
+        <ImageView
+          android:id="@+id/imgBannerCafe1"
+          android:layout_width="110dp"
+          android:layout_height="110dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/sandwich1"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
