@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -42,4 +43,12 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    // Firebase BoM (Bill of Materials) para controlar versiones compatibles
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+
+    // Firebase Authentication (para crear cuentas y hacer login)
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    // Cloud Firestore (para guardar los datos del usuario y su rol)
+    implementation("com.google.firebase:firebase-firestore-ktx")
 }
