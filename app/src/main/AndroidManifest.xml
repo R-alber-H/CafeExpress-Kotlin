@@ -42,6 +42,10 @@
       android:name=".ui.RegistroActivity"
       android:exported="false"
       android:windowSoftInputMode="adjustResize" />
+    <activity
+      android:name=".ui.UbicacionActivity"
+      android:exported="false"
+      android:windowSoftInputMode="adjustResize" />
   </application>
 
 </manifest>
