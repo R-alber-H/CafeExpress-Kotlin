@@ -51,4 +51,6 @@ dependencies {
 
     // Cloud Firestore (para guardar los datos del usuario y su rol)
     implementation("com.google.firebase:firebase-firestore-ktx")
+
+    implementation("org.maplibre.gl:android-sdk-opengl:13.6.1")
 }
