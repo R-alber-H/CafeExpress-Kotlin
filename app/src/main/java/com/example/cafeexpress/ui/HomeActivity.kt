@@ -24,11 +24,17 @@ class HomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_home)
 
+        val logonav = findViewById<ImageView>(R.id.imgLogoNav)
         val sharedPreferences = getSharedPreferences("CredencialesApp", Context.MODE_PRIVATE)
         val userIsLogged = sharedPreferences.getBoolean("is_logged", false)
 
         configurarRecyclerViewProductos()
         is_logged((userIsLogged))
+
+        logonav.setOnClickListener {
+            val intent = Intent(this, UbicacionActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun configurarRecyclerViewProductos() {
